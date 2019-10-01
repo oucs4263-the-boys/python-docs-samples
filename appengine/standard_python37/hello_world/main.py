@@ -23,8 +23,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    """Return a random number."""
+    x = random.randint(1,1000000)
+    ret = str(x)
+    return ret
 
 
 if __name__ == '__main__':
